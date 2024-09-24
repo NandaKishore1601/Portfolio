@@ -1,25 +1,5 @@
-/*-----------------------------------*\
-  #main.css
-\*-----------------------------------*/
-
-/**
- * copyright 2023 A.H. Abir
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
-
-  /**
-   * colors
-   */
-
   --white: hsla(0, 0%, 100%, 1);
   --white_a8: hsla(0, 0%, 100%, 0.08);
   --white_a12: hsla(0, 0%, 100%, 0.12);
@@ -51,10 +31,6 @@
   
   --fw-700: 700;
 
-  /**
-   * spacing
-   */
-
   --section-padding: 90px;
 
   /**
@@ -82,11 +58,6 @@
   --transition-3: 0.3s ease-in-out;
 
 }
-
-
-
-
-
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -100,6 +71,7 @@
 }
 
 li { list-style: none; }
+
 
 a,
 img,
@@ -241,116 +213,6 @@ body.nav-active { overflow: hidden; }
   transform: translate(0);
   opacity: 1;
 }
-
-
-
-
-/*-----------------------------------*\
-  # Preloader
-\*-----------------------------------*/
-
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: #353535;
-  overflow: hidden;
-  z-index: 1000;
-  transition: opacity 0.5s 0.4s;
-}
-
-.preloader.preload-finish {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.outer-space {
-  width: 600px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.rocket-container {
-  position: absolute;
-  bottom: 52%;
-  left: 49%;
-  transform: translate(-50%, 50%);
-}
-
-.rocket {
-  height: 320px;
-  animation: move 0.2s linear infinite alternate;
-}
-
-.preloader.preload-finish .rocket-container {
-  animation: finish 0.5s 1 ease forwards;
-}
-
-@keyframes finish {
-  from {
-    bottom: 52%;
-  }
-  to {
-    bottom: 140%;
-  }
-}
-
-@keyframes move {
-  from {
-    transform: translateX(-5px);
-  }
-  to {
-    transform: translateX(5px);
-  }
-}
-
-.preloader-title {
-  color: #fff;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 28px;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#circle {
-  animation: move-circle 0.2s linear infinite alternate;
-}
-
-@keyframes move-circle {
-  from {
-    transform: translateY(-5px);
-  }
-  to {
-    transform: translateY(5px);
-  }
-}
-
-@keyframes stars {
-  from {
-    transform: translateY(-1000px);
-  }
-  to {
-    transform: translateY(1000px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .outer-space {
-    width: 370px;
-  }
-  .rocket {
-    height: 180px;
-  }
-}
-
-
 
 
 /*-----------------------------------*\
@@ -641,7 +503,6 @@ body.nav-active { overflow: hidden; }
 
 .project-card {
   --padding: 24px;
-
   display: flex;
   flex-direction: column;
   gap: var(--padding);
@@ -651,11 +512,7 @@ body.nav-active { overflow: hidden; }
 
 .project-card-1,
 .project-card-2,
-:is(.project-card-3, .project-card-4) .card-content { padding: var(--padding); }
-
-.project-card-1 { padding-block-end: 0; }
-
-.project :is(.project-card-3, .project-card-4) { gap: 0; }
+.project-card-3,
 
 .project-card .card-tag {
   font-size: var(--fs-8);
@@ -676,9 +533,6 @@ body.nav-active { overflow: hidden; }
 }
 
 .project-card .btn-text:is(:hover, :focus-visible) { gap: 10px; }
-
-
-
 
 
 /*-----------------------------------*\

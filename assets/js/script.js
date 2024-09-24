@@ -25,10 +25,10 @@ const overlay = document.querySelector("[data-overlay]");
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
+addEventOnElements([overlay], "click", toggleNavbar);
 
 
 
@@ -72,21 +72,6 @@ window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 
 
-/**
- * PRELOADER
- */
-
-const stars = document.querySelectorAll("#star");
-
-stars.forEach((star) => {
-  let duration = Math.random() * (1.2 - 0.6) + 0.6;
-  star.style.animation = `stars ${duration}s infinite linear`;
-});
-
-window.addEventListener("load", () => {
-  const preloader = document.querySelector(".preloader");
-  preloader.classList.add("preload-finish");
-});
 
 
 /**
